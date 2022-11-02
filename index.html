@@ -80,7 +80,41 @@ body {
 }
 
 
+.links {
 
+display: flex;
+  
+  justify-content: center; 
+  align-items: stretch; 
+  /* flex-flow: column wrap; */ 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  align-content: center;
+
+  background-color: #ffffff;
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+    
+}     
+
+.anchor{  
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+  padding-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+
+.icons{
+max-width:50px;
+align-self:center;
+object-fit: contain;
+}
 
 
 
@@ -141,23 +175,28 @@ body {
 
 }
 </style>
-
 </head>
 <body>
 <div id="navbar">
-    <a class="active-navbar" href="javascript:void(0)">Lorem ipsum dolor sit amet, illum definitiones no quo</a>  
+    <a class="active-navbar" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwit7aflqJD7AhVhHTQIHbrQBD4QwqsBegQIFRAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU">Lorem ipsum dolor sit amet, illum definitiones no quo</a>  
 </div>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Lorem ipsum dolor sit amet, consectetur a dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-<button type="button" class="collapsible">Open Section </button>
+<button type="button" class="collapsible">Continue to</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+      <div class="links">
+   
+        <div class="anchor"><a href="https://www.google.com/search?q=opera+house+pizza+reviews&client=opera-gx&hs=Tdn&sxsrf=ALiCzsbLP_N6NKlAMN3-akA8JJRLUYfc0w%3A1666723491759&ei=oy5YY7H4Lduv5NoP19W1wA8&ved=0ahUKEwjx1ajthPz6AhXbF1kFHddqDfgQ4dUDCA8&uact=5&oq=opera+house+pizza+reviews&gs_lcp=Cgdnd3Mtd2l6EAMyCAghEMMEEKABOgYIABAHEB46BQgAEIAEOggIABAFEAcQHjoGCAAQBRAeOggIABAIEAcQHjoKCCEQwwQQChCgAUoECE0YAUoECEEYAEoECEYYAFAAWI0cYOoeaABwAXgAgAGcAogB9gmSAQUyLjQuMpgBAKABAcABAQ&sclient=gws-wiz">
+             <img class="icons" src="resources/icons/goog.png"></a></div>
+        <div class="anchor"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwik6ffzhfz6AhUSEVkFHVYvBbwQFnoECCIQAQ&url=https%3A%2F%2Fm.facebook.com%2Fprofile.php%3Fid%3D100063856308678&usg=AOvVaw04AFSk4YH3XJ4vdgzzlDAA"> 
+            <img class="icons" src="resources/icons/fb.ico"></a></div>
+        <div class="anchor"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPqrTn1fz6AhVDEGIAHWBlDHcQFnoECBsQAQ&url=https%3A%2F%2Fm.yelp.com%2Fbiz%2Fopera-house-pizzeria-la-junta&usg=AOvVaw2ji7hbJ_G_r1GPmeGz5LCk">
+            <img class="icons" src="resources/icons/yelp-icon.png"></a></div>
+          </div>
+  </div>
 
 
 <div class="bottom-navbar" id="myNavbar">
@@ -190,6 +229,7 @@ window.onscroll = function() {topNav()};
             x.className = "bottom-navbar";
             }
         }
+        
         var coll = document.getElementsByClassName("collapsible");
         var i;
         
