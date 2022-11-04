@@ -26,8 +26,6 @@
             <img class="icons" src="resources/icons/yelp-icon.png"></a></div>
           </div>
   </div>
-
-
 <div class="bottom-navbar" id="myNavbar">
   <a href="index.html" class="active-navbar">Home</a>
   <a href="pages/claims.html">Claims</a>
@@ -74,7 +72,61 @@ window.onscroll = function() {topNav()};
           });
         }
 
+        let arrOfDates = [
+    {
+        day: "10/01/2022",
+        wage: 1.25
+    },
+    {
+        day: "10/02/2022",
+        wage: 1.24
+    },
+    {
+        day: "10/03/2022",
+        wage: 1.23
+    },
+    {
+        day: "10/04/2022",
+        wage: 1.25
+    },
+    {
+        day: "10/05/2022",
+        wage: 1.25
+    },
+    {
+        day: "10/06/2022",
+        wage: 1.25
+    },
+    {
+        day: "10/07/2022",
+        wage: 1.25
+    },
+];
+
+function promptUserForDate() {
+  const userInput = prompt("Date Employee Worked");
+
+  if (arrOfDates.some(arrOfDates => arrOfDates.day === userInput))  {    
+    userDateObject = JSON.stringify(arrOfDates.find(arrOfDates=>arrOfDates.day === userInput));
+    wageAmount = userDateObject.replace("{'day':,'wage':", "");
+    
+    alert(wageAmount)
+  } else {
+    alert("No data for the selected date");
+
+    promptUserForDate();
+  }
+}
+
+promptUserForDate();
+
 </script>
 
 </body>
 </html>
+
+"userDateObject".replace(/\D+/g, "");
+str = JSON.stringify(obj);
+str = JSON.stringify(obj, null, 4); // (Optional) beautiful indented output.
+console.log(str); // Logs output to dev tools console.
+alert(str); // Displays output using window.alert()
