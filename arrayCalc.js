@@ -29,16 +29,20 @@ let arrOfDates = [
     },
 ];
 
+const div =document.createElement("div")
+
 function promptUserForDate() {
   const userInput = prompt("Date Employee Worked");
 
   if (arrOfDates.some(arrOfDates => arrOfDates.day === userInput)) 
   //if user input matches data in the array the continue
   {    
-    //matches user value with array value then pulls whole respective object
+    //turned into string with JSON.stringify()
     let userDateObject = JSON.stringify(arrOfDates.find(arrOfDates=>arrOfDates.day === userInput));
-    //result is {"day":"10/01/2022","wage":1.25}
+     //matches user value with array value then pulls whole respective object
+     //result is {"day":"10/01/2022","wage":1.25}
       let sliceObject = userDateObject.replace(/\D/g, "");
+      //remove all non "digits" from the string
       //result is 10022022124
         let x = sliceObject.slice(8, 11);
         //results will be uniform for my dataset so I can slice consistently
